@@ -44,6 +44,15 @@ final class User
         return $user;
     }
 
+    public static function reconstruct(
+        int $id,
+        Email $email,
+        PasswordHash $passwordHash,
+        bool $isActive = true
+    ): self {
+        return new self($id, $email, $passwordHash, $isActive);
+    }
+
     public function deactivate(): void
     {
         $this->isActive = false;

@@ -16,5 +16,5 @@ interface IdGeneratorInterface
     /**
      * Generate a unique identifier.
      */
-    public function generate(): int;
+    public function generate(): string;
 }
